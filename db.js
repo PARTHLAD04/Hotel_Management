@@ -1,8 +1,12 @@
 const mongoose = require('mongoose');
 
-const mongoURL = 'mongodb://localhost:27017/hotelDB';
+// const mongoURL = 'mongodb://localhost:27017/hotelDB';
+const mongoURLAtlas = 'mongodb+srv://ladparth1104:helloworld123@cluster0.twvykx8.mongodb.net/?retryWrites=true&w=majority'
 
-mongoose.connect(mongoURL);
+mongoose.connect(mongoURLAtlas , {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
 
 const db = mongoose.connection;
 
