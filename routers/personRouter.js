@@ -29,7 +29,7 @@ router.post('/signup', async (req, res) => {
 });
 
 // Login Person
-router.post('/login', async (req, res, next) => {
+router.post('/login', async (req, res) => {
     try {
         const { username, password } = req.body;
         const person = await Person.findOne({ username: username });

@@ -4,6 +4,7 @@ const passport = require('./auth');
 const db = require('./db');
 const personRouter = require('./routers/personRouter')
 const menuRouter = require('./routers/menuRouter')
+const aiRouter = require('./routers/aiRouter')
 require('dotenv').config();
 
 const port = process.env.PORT || 3000;
@@ -31,6 +32,8 @@ app.use('/person', personRouter);
 //menu Router
 app.use('/menu', menuRouter);
 
+//ai Router
+app.use('/ai', aiRouter);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
